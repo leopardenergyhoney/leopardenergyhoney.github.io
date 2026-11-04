@@ -1,0 +1,223 @@
+/* LEOPARD Energy Honey: one stylesheet for both product pages.
+   The only thing that differs per page is --base-tone, set on <html> in each index.html. */
+
+@font-face{font-family:Marcellus;src:url(../fonts/Marcellus-400-latin.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Michroma;src:url(../fonts/Michroma-400-latin.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Alegreya Sans";src:url(../fonts/AlegreyaSans-400-latin.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Alegreya Sans";src:url(../fonts/AlegreyaSans-800-latin.woff2) format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:"El Messiri";src:url(../fonts/ElMessiri-700-arabic.woff2) format("woff2");font-weight:700;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+200C-200E,U+FB50-FDFF,U+FE70-FEFF}
+@font-face{font-family:Tajawal;src:url(../fonts/Tajawal-400-arabic.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+200C-200E,U+FB50-FDFF,U+FE70-FEFF}
+@font-face{font-family:Tajawal;src:url(../fonts/Tajawal-700-arabic.woff2) format("woff2");font-weight:700;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+200C-200E,U+FB50-FDFF,U+FE70-FEFF}
+
+:root{
+  --espresso:#5A2E16;
+  --espresso-deep:#3A1E0E;
+  --copper-dark:#8B5A2B;
+  --copper-light:#C08A5B;
+  --copper:linear-gradient(90deg,var(--copper-dark),var(--copper-light));
+  --copper-text:#774A21;   /* copper dark enough for small type on silver */
+  --gold:#C9A063;
+  --ink:#3A1E0E;
+  --panel:rgba(255,255,255,.8);
+  --f-display:"Alegreya Sans","El Messiri",system-ui,sans-serif;
+  --f-label:Michroma,"Tajawal",system-ui,sans-serif;
+  --f-body:"Alegreya Sans","Tajawal",system-ui,sans-serif;
+  --gutter:20px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font:400 18px/1.5 var(--f-body);background:#FAF8F5;overflow-x:hidden;
+  padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+/* The base tone sits behind the page, so the silver gradient spans the screen as you scroll. */
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:var(--base-tone)}
+[lang=ar] body{font-size:17px;line-height:1.75}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3,p,ul,ol,dl,dd{margin:0;padding:0}
+ul,ol{list-style:none}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--espresso);outline-offset:3px;border-radius:4px}
+bdi{unicode-bidi:isolate}
+/* Arabic letters join: never letter-space them. */
+[lang=ar] *{letter-spacing:0!important}
+
+.notice{padding:32px var(--gutter);text-align:center;max-width:32em;margin:auto}
+.notice a{font-weight:800}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;padding:12px var(--gutter) 28px;text-align:center}
+.lang-bar{display:flex;justify-content:flex-end;position:relative;z-index:2}
+.lang-btn{min-height:44px;min-width:44px;padding:0 16px;background:none;border:1px solid var(--gold);border-radius:999px;
+  cursor:pointer;color:var(--espresso);font-weight:700;background-color:rgba(255,255,255,.55);font-size:16px}
+.lang-btn:hover{background-color:#fff}
+.honeycomb{position:absolute;top:-8px;inset-inline-start:-24px;width:128px;height:auto;color:var(--gold);opacity:.55;pointer-events:none}
+.hero-inner{position:relative;z-index:1;display:flex;flex-direction:column}
+.hero-copy{display:contents}          /* phone order: logo, name, sachet, price + button */
+.sachet-wrap{order:1}
+.buy{order:2}
+.logo{width:112px;margin:-38px auto 12px}
+.headline{font:800 clamp(42px,12.6vw,60px)/.98 var(--f-display);color:var(--espresso);text-transform:uppercase;letter-spacing:.015em;
+  max-width:7em;margin-inline:auto}
+[lang=ar] .headline{font-size:clamp(44px,13vw,64px);line-height:1.15}
+.product-name{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:12px;
+  font:400 clamp(14px,4.1vw,17px)/1.45 var(--f-label);letter-spacing:.09em;text-transform:uppercase;color:var(--copper-text)}
+[lang=ar] .product-name{font-size:21px;font-weight:700}
+.product-name::before,.product-name::after{content:"";flex:0 0 26px;height:1px;background:var(--gold)}
+.sachet-wrap{position:relative;margin:18px auto 0;width:max-content;max-width:100%}
+.sachet{width:auto;height:clamp(300px,46svh,420px);filter:drop-shadow(0 16px 20px rgba(58,30,14,.26))}
+.buy{position:relative;margin:-30px auto 0;max-width:420px;padding:16px;background:var(--panel);border:1px solid var(--gold);border-radius:6px;
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.price-row{display:flex;align-items:baseline;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.price{font:800 30px/1.1 var(--f-display);color:var(--espresso)}
+.price-note{font-size:16px;color:var(--copper-text)}
+.cta{display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:10px 18px;border-radius:4px;color:#fff;text-decoration:none;
+  font-weight:800;font-size:19px;background:linear-gradient(90deg,var(--espresso),var(--copper-dark));
+  box-shadow:0 0 0 1px var(--gold) inset,0 6px 14px rgba(58,30,14,.22);transition:filter .2s}
+.cta:hover{filter:brightness(1.1)}
+.cta svg{flex:none;width:22px;height:22px;fill:currentColor}
+.ribbon{display:block;width:100%;height:auto;pointer-events:none}
+.ribbon.hero-ribbon{position:absolute;inset-inline:0;bottom:0;opacity:.95;z-index:0}
+[dir=rtl] .ribbon{transform:scaleX(-1)}
+
+/* ---------- Sections ---------- */
+.sections{display:grid;gap:16px;padding:8px var(--gutter) 40px;max-width:1160px;margin:auto}
+.panel{position:relative;padding:24px 20px;background:var(--panel);border:1px solid rgba(201,160,99,.55);border-radius:6px;overflow:hidden;min-width:0}
+.panel h2{font:800 27px/1.15 var(--f-display);color:var(--espresso);text-transform:uppercase;letter-spacing:.015em;padding-bottom:10px;margin-bottom:16px;border-bottom:1px solid var(--gold)}
+[lang=ar] .panel h2{font-size:27px}
+
+.about p{position:relative;z-index:1}
+.about-art{width:min(72%,290px);margin:14px -20px -24px auto}
+
+.items{display:grid;gap:14px}
+.items li{display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start}
+.items .hex{width:20px;height:22px;margin-top:4px;color:var(--copper-dark)}
+.items strong{display:block;font-weight:800;color:var(--espresso);font-size:19px;line-height:1.3}
+[lang=ar] .items strong{font-weight:700}
+
+.steps{display:grid;gap:14px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:center;counter-increment:s}
+.steps li::before{content:counter(s);width:36px;height:40px;display:grid;place-items:center;font-weight:800;color:#fff;
+  background:linear-gradient(135deg,var(--espresso),var(--copper-dark));
+  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+[lang=ar] .steps li::before{content:counter(s,arabic-indic)}
+
+.details{display:grid}
+.details div{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:14px;padding:11px 0;border-bottom:1px solid rgba(201,160,99,.5)}
+.details div:last-child{border-bottom:0;padding-bottom:0}
+.details div:first-child{padding-top:0}
+.details dt{color:var(--copper-text);font-size:16px}
+.details dd{font-weight:800;color:var(--espresso);overflow-wrap:anywhere}
+[lang=ar] .details dd{font-weight:700}
+
+.warnings{background:rgba(255,255,255,.92);border-color:var(--gold)}
+.warnings ul{display:grid;gap:10px}
+.warnings li{padding-inline-start:16px;position:relative}
+.warnings li::before{content:"";position:absolute;inset-inline-start:0;top:.62em;width:6px;height:6px;background:var(--copper-dark);transform:rotate(45deg)}
+
+/* ---------- Gallery ---------- */
+.gallery{padding:24px 0 16px}
+.gallery h2{margin-inline:20px}
+.track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:0 20px 6px;scroll-padding:0 20px;scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 min(78%,300px);scroll-snap-align:center;margin:0;min-width:0}
+.slide-btn{display:block;width:100%;padding:0;border:1px solid rgba(201,160,99,.6);border-radius:4px;background:#fff;cursor:zoom-in;overflow:hidden}
+.slide-btn img{width:100%;aspect-ratio:4/5;object-fit:contain;background:#fff}
+.slide figcaption{padding-top:8px;font-size:16px;color:var(--espresso);text-align:center}
+.placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;aspect-ratio:4/5;padding:16px;text-align:center;
+  border:1px dashed var(--copper-dark);border-radius:4px;background:rgba(201,160,99,.1);color:var(--espresso)}
+.placeholder .hex{width:34px;height:38px;color:var(--gold)}
+.placeholder b{font:400 12px/1.5 var(--f-label);letter-spacing:.08em;text-transform:uppercase}
+[lang=ar] .placeholder b{font-size:16px;font-weight:700}
+.gallery-nav{display:none}
+
+/* ---------- Lightbox ---------- */
+dialog.lightbox{width:100vw;height:100dvh;max-width:none;max-height:none;margin:0;padding:0;border:0;background:rgba(30,16,8,.96);color:#fff}
+dialog.lightbox::backdrop{background:rgba(30,16,8,.96)}
+.lb-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.lb-track::-webkit-scrollbar{display:none}
+.lb-slide{flex:0 0 100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:64px 12px 28px;scroll-snap-align:center;margin:0}
+.lb-slide img{max-width:100%;max-height:calc(100% - 40px);min-height:0;width:auto;height:auto;object-fit:contain;touch-action:pinch-zoom pan-x}
+.lb-btn{position:absolute;display:grid;place-items:center;width:48px;height:48px;border:1px solid var(--gold);border-radius:50%;background:rgba(30,16,8,.7);cursor:pointer;color:#fff}
+.lb-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2}
+.lb-close{top:10px;inset-inline-end:10px}
+.lb-prev,.lb-next{display:none;top:50%;margin-top:-24px}
+.lb-prev{inset-inline-start:16px}.lb-next{inset-inline-end:16px}
+[dir=rtl] .lb-prev svg,[dir=rtl] .lb-next svg,[dir=rtl] .gallery-nav svg{transform:scaleX(-1)}
+
+/* ---------- Footer ---------- */
+.foot-ribbon{margin-bottom:-1px}
+footer{background:var(--espresso-deep);color:#F5EDE3;padding:32px var(--gutter) 40px}
+.foot-inner{max-width:1160px;margin:auto;display:grid;gap:26px}
+.foot-title{display:block;font:400 12px/1.5 var(--f-label);letter-spacing:.12em;text-transform:uppercase;color:#E3C491;margin-bottom:10px}
+[lang=ar] .foot-title{font-size:16px;font-weight:700}
+.foot-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.foot-links>li>a,.foot-links>li>span{display:flex;align-items:center;min-height:48px;padding:6px 12px;border:1px solid rgba(201,160,99,.55);border-radius:4px;text-decoration:none;overflow-wrap:anywhere}
+.foot-links>li>a:hover{background:rgba(201,160,99,.16)}
+.foot-links small{display:block;font-size:13px;color:#E3C491;line-height:1.3}
+.foot-links .val{display:block;line-height:1.3;font-size:15px}
+.other{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;padding:10px 14px;border:1px solid var(--gold);border-radius:4px;text-decoration:none;font-weight:800;font-size:19px}
+[lang=ar] .other{font-weight:700}
+.other:hover{background:rgba(201,160,99,.16)}
+.other svg{flex:none;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2}
+[dir=rtl] .other svg{transform:scaleX(-1)}
+footer :focus-visible{outline-color:#fff}
+
+/* ---------- Sticky order bar: within thumb reach once the hero button has scrolled away ---------- */
+.sticky{position:fixed;inset-inline:0;bottom:0;z-index:5;padding:10px var(--gutter) calc(10px + env(safe-area-inset-bottom));
+  background:rgba(255,255,255,.94);border-top:1px solid var(--gold);transform:translateY(110%);visibility:hidden;transition:transform .3s var(--ease),visibility .3s}
+.sticky.on{transform:none;visibility:visible}
+.sticky .cta{max-width:520px;margin:auto}
+
+/* ---------- Motion: soft fade-ins only, and only when JS is running ---------- */
+.js .reveal{opacity:0;transform:translateY(10px);transition:opacity .45s var(--ease),transform .45s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .sticky,.cta{transition:none}
+}
+
+/* ---------- Tablet and up ---------- */
+@media (min-width:640px){
+  :root{--gutter:32px}
+  .slide{flex-basis:260px}
+  .buy{margin-top:-30px}
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width:960px){
+  body{padding-bottom:0}
+  .sticky{display:none}
+  .hero{padding:16px 40px 90px}
+  .lang-bar{max-width:1160px;margin:auto}
+  .hero-inner{max-width:1040px;margin:auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;column-gap:48px;text-align:start}
+  .hero-copy{display:flex;flex-direction:column;align-items:flex-start}
+  .sachet-wrap,.buy{order:0}
+  .logo{margin:0 0 22px;width:150px}
+  .headline{font-size:76px;margin-inline:0}
+  [lang=ar] .headline{font-size:76px}
+  .product-name{justify-content:flex-start;font-size:19px}
+  .product-name::before{display:none}
+  .product-name::after{flex-basis:70px}
+  .buy{margin:28px 0 0;width:100%;max-width:440px}
+  .price-row{justify-content:flex-start}
+  .sachet-wrap{margin:0 auto}
+  .sachet{height:600px}
+  .honeycomb{width:300px}
+  .sections{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;padding-bottom:64px}
+  .gallery{grid-column:1/-1;padding:32px 0 24px}
+  .gallery h2{margin-inline:32px}
+  .track{padding-inline:32px;scroll-padding:0 32px}
+  .slide{flex-basis:calc((100% - 36px)/3.4);scroll-snap-align:start}
+  .gallery-nav{display:flex;gap:8px;position:absolute;top:22px;inset-inline-end:32px}
+  .gallery-nav button{display:grid;place-items:center;width:44px;height:44px;background:#fff;border:1px solid var(--gold);border-radius:50%;cursor:pointer;color:var(--espresso)}
+  .gallery-nav svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2}
+  .panel{padding:32px}
+  .about-art{margin-right:-32px;margin-bottom:-32px}
+  .warnings{grid-column:auto}
+  .lb-prev,.lb-next{display:grid}
+  .foot-inner{grid-template-columns:2fr 1fr;align-items:start;gap:40px}
+  .foot-links{grid-template-columns:repeat(4,minmax(0,1fr))}
+}

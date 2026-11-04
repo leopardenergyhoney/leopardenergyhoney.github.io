@@ -1,0 +1,8 @@
+qrcode==8.2
+pillow
+numpy
+opencv-python-headless
+fonttools
+brotli
+uharfbuzz
+pyzbar

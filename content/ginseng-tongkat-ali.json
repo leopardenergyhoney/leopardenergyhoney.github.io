@@ -1,0 +1,166 @@
+{
+  "_HOW_TO_EDIT": "Change only the text inside the quotes on the right of each colon. Keep every quote, comma and bracket. Replace anything in [SQUARE BRACKETS] with your real details.",
+
+  "contact": {
+    "whatsapp": "[WHATSAPP NUMBER]",
+    "phone": "[PHONE NUMBER]",
+    "instagram": "[INSTAGRAM URL]",
+    "facebook": "[FACEBOOK URL]"
+  },
+
+  "googleSheetCsvUrl": "",
+
+  "images": {
+    "hero": "ginseng-tongkat-ali/sachet-hero.webp"
+  },
+
+  "gallery": [
+    { "image": "ginseng-tongkat-ali/sachet-front.webp", "w": 800, "h": 1000, "en": "Sachet, front", "ar": "الكيس من الأمام" },
+    { "image": "ginseng-tongkat-ali/sachet-back.webp", "w": 520, "h": 710, "en": "Sachet, back", "ar": "الكيس من الخلف" },
+    { "image": "", "en": "Gift box, 14 × 10 × 3 cm", "ar": "علبة الهدايا، ١٤ × ١٠ × ٣ سم" },
+    { "image": "", "en": "Lifestyle photo", "ar": "صورة لايف ستايل" },
+    { "image": "", "en": "Lifestyle photo", "ar": "صورة لايف ستايل" }
+  ],
+
+  "en": {
+    "pageTitle": "LEOPARD Energy Honey – Ginseng & Tongkat Ali",
+    "headline": "Energy Honey",
+    "productName": "Ginseng & Tongkat Ali",
+    "price": "[PRICE EGP]",
+    "priceNote": "Gift box",
+    "whatsappMessage": "Hello, I would like to order LEOPARD Energy Honey – Ginseng & Tongkat Ali.",
+    "photoNeeded": "Photo needed",
+
+    "labels": {
+      "order": "Order on WhatsApp",
+      "gallery": "Photos",
+      "about": "About the product",
+      "ingredients": "Ingredients",
+      "benefits": "Benefits",
+      "howTo": "How to use",
+      "details": "Product details",
+      "warnings": "Warnings",
+      "contact": "Contact us",
+      "whatsapp": "WhatsApp",
+      "phone": "Phone",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "alsoFrom": "Also from LEOPARD",
+      "close": "Close",
+      "previous": "Previous photo",
+      "next": "Next photo",
+      "enlarge": "Enlarge photo"
+    },
+
+    "about": "Natural honey blended with ginseng and tongkat ali and packed in a single-serve sachet. Easy to carry and easy to take, to support your daily well-being wherever the day takes you. Presented in the LEOPARD gift box.",
+
+    "ingredients": [
+      { "name": "Natural honey", "note": "Made by bees from flower nectar; a natural source of carbohydrates." },
+      { "name": "Ginseng", "note": "A root with a long history of use in traditional East Asian herbal practice." },
+      { "name": "Tongkat ali", "note": "The root of Eurycoma longifolia, a shrub native to Southeast Asia." },
+      { "name": "[OTHER INGREDIENTS]", "note": "[Add any others from the label, or delete this line]" }
+    ],
+
+    "benefits": [
+      { "title": "Energy", "text": "Honey's natural carbohydrates are a source of energy." },
+      { "title": "Vitality", "text": "A convenient addition to an active lifestyle." },
+      { "title": "Daily well-being", "text": "One simple sachet to make part of your daily routine." }
+    ],
+
+    "howTo": [
+      "Take 1 sachet daily.",
+      "Take it directly from the sachet.",
+      "Or mix it with warm water or milk."
+    ],
+
+    "details": [
+      { "label": "Net weight", "value": "[NET WEIGHT PER SACHET]" },
+      { "label": "Sachets per box", "value": "[SACHETS PER BOX]" },
+      { "label": "Box size", "value": "14 × 10 × 3 cm" },
+      { "label": "Storage", "value": "Cool, dry place" },
+      { "label": "Shelf life", "value": "[SHELF LIFE]" },
+      { "label": "Batch / expiry", "value": "See sachet" },
+      { "label": "Brand", "value": "LEOPARD Energy Honey" },
+      { "label": "Manufacturer", "value": "[MANUFACTURER NAME AND ADDRESS]" }
+    ],
+
+    "warnings": [
+      "For adults only. Keep out of reach of children.",
+      "Not intended to diagnose, treat, cure or prevent any disease.",
+      "Consult a doctor if you take medication or have blood pressure, diabetes, heart, or other health conditions."
+    ],
+
+    "otherProduct": { "name": "Royal Jelly", "url": "../royal-jelly/" }
+  },
+
+  "ar": {
+    "pageTitle": "ليوبارد عسل الطاقة – الجينسنج وتونجكات علي",
+    "headline": "عسل الطاقة",
+    "productName": "الجينسنج وتونجكات علي",
+    "price": "[PRICE EGP]",
+    "priceNote": "علبة هدايا",
+    "whatsappMessage": "مرحبًا، أود طلب ليوبارد عسل الطاقة – الجينسنج وتونجكات علي.",
+    "photoNeeded": "الصورة مطلوبة",
+
+    "labels": {
+      "order": "اطلب عبر واتساب",
+      "gallery": "الصور",
+      "about": "عن المنتج",
+      "ingredients": "المكونات",
+      "benefits": "الفوائد",
+      "howTo": "طريقة الاستخدام",
+      "details": "تفاصيل المنتج",
+      "warnings": "تحذيرات",
+      "contact": "تواصل معنا",
+      "whatsapp": "واتساب",
+      "phone": "الهاتف",
+      "instagram": "إنستجرام",
+      "facebook": "فيسبوك",
+      "alsoFrom": "أيضًا من ليوبارد",
+      "close": "إغلاق",
+      "previous": "الصورة السابقة",
+      "next": "الصورة التالية",
+      "enlarge": "تكبير الصورة"
+    },
+
+    "about": "عسل طبيعي ممزوج بالجينسنج والتونجكات علي ومعبأ في كيس فردي. سهل الحمل وسهل التناول، ليدعم عافيتك اليومية أينما كنت. يأتيك في علبة هدايا ليوبارد.",
+
+    "ingredients": [
+      { "name": "عسل طبيعي", "note": "يصنعه النحل من رحيق الأزهار، وهو مصدر طبيعي للكربوهيدرات." },
+      { "name": "الجينسنج", "note": "جذر له تاريخ طويل من الاستخدام في الممارسات العشبية التقليدية في شرق آسيا." },
+      { "name": "تونجكات علي", "note": "جذر شجيرة Eurycoma longifolia، وموطنها جنوب شرق آسيا." },
+      { "name": "[OTHER INGREDIENTS]", "note": "[أضف أي مكونات أخرى من الملصق أو احذف هذا السطر]" }
+    ],
+
+    "benefits": [
+      { "title": "الطاقة", "text": "الكربوهيدرات الطبيعية في العسل مصدر للطاقة." },
+      { "title": "الحيوية", "text": "إضافة سهلة إلى نمط حياة نشط." },
+      { "title": "العافية اليومية", "text": "كيس واحد بسيط ليكون جزءًا من روتينك اليومي." }
+    ],
+
+    "howTo": [
+      "تناول كيسًا واحدًا يوميًا.",
+      "تناوله مباشرة من الكيس.",
+      "أو امزجه بالماء الدافئ أو الحليب."
+    ],
+
+    "details": [
+      { "label": "الوزن الصافي", "value": "[NET WEIGHT PER SACHET]" },
+      { "label": "عدد الأكياس في العلبة", "value": "[SACHETS PER BOX]" },
+      { "label": "مقاس العلبة", "value": "١٤ × ١٠ × ٣ سم" },
+      { "label": "التخزين", "value": "في مكان بارد وجاف" },
+      { "label": "مدة الصلاحية", "value": "[SHELF LIFE]" },
+      { "label": "التشغيلة / تاريخ الانتهاء", "value": "انظر الكيس" },
+      { "label": "العلامة التجارية", "value": "LEOPARD Energy Honey" },
+      { "label": "الشركة المصنعة", "value": "[MANUFACTURER NAME AND ADDRESS]" }
+    ],
+
+    "warnings": [
+      "للبالغين فقط. يحفظ بعيدًا عن متناول الأطفال.",
+      "هذا المنتج غير مخصص لتشخيص أي مرض أو علاجه أو الشفاء منه أو الوقاية منه.",
+      "استشر طبيبك إذا كنت تتناول أدوية أو تعاني من ضغط الدم أو السكري أو أمراض القلب أو أي حالات صحية أخرى."
+    ],
+
+    "otherProduct": { "name": "غذاء الملكات", "url": "../royal-jelly/" }
+  }
+}
