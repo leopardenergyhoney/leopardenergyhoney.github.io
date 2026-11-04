@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate and verify the printed QR codes for both product pages.
 
-    python tools/generate_qr.py --base-url https://USERNAME.github.io/leopard-energy-honey
+    python tools/generate_qr.py --base-url https://ORGANIZATION.github.io
 
 Writes qr/<slug>.svg (vector) and qr/<slug>.png (1200 px wide). Each code uses error
 correction H, dark brown on white, and a full 4-module quiet zone, with the label as
@@ -231,7 +231,7 @@ def verify(slug, url, svg, png):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--base-url", required=True, help="e.g. https://USERNAME.github.io/leopard-energy-honey")
+    ap.add_argument("--base-url", required=True, help="e.g. https://ORGANIZATION.github.io")
     ap.add_argument("--logo", action="store_true", help="add the small leopard emblem in the centre (test before printing)")
     ap.add_argument("--out", default=str(ROOT / "qr"))
     a = ap.parse_args()

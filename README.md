@@ -4,12 +4,12 @@ Two mobile product pages that open when a customer scans the QR code on the back
 
 | | |
 |---|---|
-| **Royal Jelly** | `https://nouralhalwagy.github.io/leopard-energy-honey/royal-jelly/` |
-| **Ginseng & Tongkat Ali** | `https://nouralhalwagy.github.io/leopard-energy-honey/ginseng-tongkat-ali/` |
-| **Repository** | `https://github.com/nouralhalwagy/leopard-energy-honey` |
+| **Royal Jelly** | `https://leopardenergyhoney.github.io/royal-jelly/` |
+| **Ginseng & Tongkat Ali** | `https://leopardenergyhoney.github.io/ginseng-tongkat-ali/` |
+| **Repository** | `https://github.com/leopardenergyhoney/leopardenergyhoney.github.io` |
 
-> ## ⚠️ NEVER rename the repository or the page folders
-> The printed QR codes depend on these exact URLs. If you rename `leopard-energy-honey`, `royal-jelly` or `ginseng-tongkat-ali`, every sachet already printed stops working. To change content, edit the files and keep the URLs the same.
+> ## ⚠️ NEVER rename the organization, the repository or the page folders
+> The printed QR codes depend on these exact URLs. If you rename the organization `leopardenergyhoney`, the repository `leopardenergyhoney.github.io`, `royal-jelly` or `ginseng-tongkat-ali`, every sachet already printed stops working. To change content, edit the files and keep the URLs the same.
 
 ---
 
@@ -35,7 +35,7 @@ Saved changes go live in **about 1 minute**. If you still see the old version, c
 
 **On a phone** (use your browser in desktop mode if you don't see the pencil)
 
-1. In your phone's browser, open `github.com/nouralhalwagy/leopard-energy-honey` and sign in.
+1. In your phone's browser, open `github.com/leopardenergyhoney/leopardenergyhoney.github.io` and sign in.
 2. Tap `content`, then the product's file.
 3. Tap the `…` menu or the pencil, then **Edit file**.
 4. Change the text, then tap **Commit changes**.
@@ -67,8 +67,8 @@ Photos must be WebP to keep the page fast. Convert them for free at [squoosh.app
 ### 3. Or edit on your computer
 
 ```bash
-git clone https://github.com/nouralhalwagy/leopard-energy-honey.git
-cd leopard-energy-honey
+git clone https://github.com/leopardenergyhoney/leopardenergyhoney.github.io.git
+cd leopardenergyhoney.github.io
 # edit files, then:
 git add -A
 git commit -m "Update prices"
@@ -106,7 +106,7 @@ The live site uses GitHub Pages, deployed from the `main` branch's root folder. 
 
 ```bash
 git push -u origin main
-gh api -X POST repos/nouralhalwagy/leopard-energy-honey/pages -f "source[branch]=main" -f "source[path]=/"
+gh api -X POST repos/leopardenergyhoney/leopardenergyhoney.github.io/pages -f "source[branch]=main" -f "source[path]=/"
 ```
 
 The first publish takes a few minutes. On the website, the same setting is at **Settings → Pages → Deploy from a branch → main, / (root)**.
@@ -131,7 +131,7 @@ The centre logo is off by default. At 2 cm each square is only about 0.35 mm, an
 
 ```bash
 pip install -r tools/requirements.txt
-python tools/generate_qr.py --base-url https://nouralhalwagy.github.io/leopard-energy-honey
+python tools/generate_qr.py --base-url https://leopardenergyhoney.github.io
 ```
 
 This writes all four files, decodes them again and stops with an error on any mismatch. Only regenerate if the URL has never been printed. Editing content never requires new codes.
