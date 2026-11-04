@@ -125,7 +125,7 @@ Files are in `qr/`: `royal-jelly.svg`, `royal-jelly.png`, `ginseng-tongkat-ali.s
 - Each PNG is 1200 px wide with the label underneath. In the SVG, the label is outlined (no font needed) and has the id `label`, so a designer can move it.
 - **Minimum print size: about 2 × 2 cm.** Print on a white background, as the sachet's white box provides. Test a printed sample with several phones before the full run.
 
-The centre logo is off by default. At 2 cm each square is only about 0.35 mm, and the emblem would be too small to read. Add `--logo` only if you print larger and have tested real samples.
+The centre logo is off by default. At 2 cm each square is only about 0.4 mm, and the emblem would be too small to read. Add `--logo` only if you print larger and have tested real samples.
 
 ### Regenerate them
 
